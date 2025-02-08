@@ -19,11 +19,11 @@ return new class extends Migration
             $table->string('Address')->nullable();
             $table->Char('Gender',1)->nullable();
             $table->string('PlaceOfBirth')->nullable();
-            $table->dateTime('DateOfBirth')->nullable();
+            $table->date('DateOfBirth')->nullable();
             $table->string('Email')->nullable();
             $table->string('Phone',20)->nullable();
             $table->foreignId('JobTitleID')->constrained('jobtitles')->onDelete('cascade');
-            $table->dateTime('HireDate')->nullable();
+            $table->date('HireDate')->nullable();
             $table->timestamps();
         });
     }
